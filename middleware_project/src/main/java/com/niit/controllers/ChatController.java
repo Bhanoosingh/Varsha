@@ -40,10 +40,10 @@ import com.niit.model.User;
         @RequestMapping("/getmessage")
         public ResponseEntity<?> getMessage(HttpSession session){
         	String email=(String)session.getAttribute("loginId");
-			if(email==null){
+			/*if(email==null){
 				ErrorClazz error=new ErrorClazz(4,"Unauthrozied access.. Please login");
 				return new ResponseEntity<ErrorClazz>(error,HttpStatus.UNAUTHORIZED); //2nd callback function
-			}
+			}*/
 			
 			//List of blogs waiting for approval - only ADMIN can view - Authorized 
 			
